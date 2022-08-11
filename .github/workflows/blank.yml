@@ -10,9 +10,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Packer initialize
+        working-directory: packer
         run: |
-          echo Hello, world!
-          echo Hello, world2!
-          echo Hello, world3!
-          echo Hello, world4!
-          echo Hello, world5!
+          packer init . 
+          packer validate . 
