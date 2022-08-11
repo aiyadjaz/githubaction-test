@@ -9,5 +9,9 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Packer initialize
+        run: |
+          echo Hello, world!
+          echo Hello, world1!
+          echo Hello, world2!
+          echo Hello, world3!
