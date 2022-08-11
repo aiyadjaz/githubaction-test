@@ -1,4 +1,4 @@
-name: Pipeline1
+name: packer
 on:
   push:
     branches: [ "main" ]
@@ -13,4 +13,10 @@ jobs:
         working-directory: packer
         run: |
           packer init . 
-          packer validate . 
+      
+
+      # Runs a single command using the runners shell
+      - name: Packer validate
+        working-directory: packer
+        run: |
+          packer validate .           
