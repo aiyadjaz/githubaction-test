@@ -20,3 +20,10 @@ jobs:
         working-directory: packer
         run: |
           packer validate .           
+
+
+      # Runs a single command using the runners shell
+      - name: Packer build
+        working-directory: packer
+        run: |
+          packer build image.pkr.hcl   
